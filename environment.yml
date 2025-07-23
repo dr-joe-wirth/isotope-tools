@@ -1,0 +1,3 @@
+name: isotope-tools
+dependencies:
+  - python >=3.9
