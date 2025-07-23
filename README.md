@@ -1,4 +1,7 @@
 # Isotope tools
+## motiviation
+in graduate school, i needed to calculate the abundances of compounds with different mass shifts. i decided to actually put together a small little program to help anyone else that may need to do this in the future.
+
 ## installation
 install the software with these commands:
 
@@ -78,4 +81,6 @@ mass	shift	abundance
 
 where the first column is the atomic mass, the second column is the mass shift from the most stable isotopes, and the third column is the abundance of any species that possess the given mass.
 
-Some chemical formulas are quite large and require evaluating very large numbers of isotopomers. To address this, multithreading is available with the argument: `--num-cpus`.
+> [!Note]
+> Some chemical formulas are quite large and require evaluating very large numbers of isotopomers. As a result, calculating the mass shifts of all possible isotopomers is very computationally expensive. To help address this, multithreading is available with the argument: `--num-cpus`. Alternatively, consider omitting atoms such as hydrogen from your empirical formula. For example, this would change the formula above from `C5H10O2S` to `C5O2S`. Because there are two isotopes of hydrogen in the abundance table and ten hydrogen atoms, omitting them reduces the number of calculations by a factor of 2<sup>10</sup>.
+
